@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+
+    const [number, setNumber] = useState(0)
+
+    // const add = () => {
+    //     setNumber(number + 1)
+    // }
+
+    // const remove = () => {
+    //     setNumber(number - 1)
+    // }
+
+    return(
+        < >
+            <h1>{number}</h1>
+            {/* <button onClick={() => {add()}}>Somar</button>
+            <button onClick={() => {remove()}}>Remover</button> */}
+            {/* ou */}
+            <button onClick={() => setNumber(number + 1)}>Somar</button>
+            <button onClick={() => setNumber(number - 1)}>Remover</button>
+        </>
+    )
 }
-
-export default App;
